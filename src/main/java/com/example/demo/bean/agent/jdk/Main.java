@@ -18,6 +18,19 @@ public class Main {
             System.out.println(method.getName());
         }
         /**
+         * 获取指定的方法、
+         *
+         */
+        Method sout = tagetClass.getDeclaredMethod("sout", String.class
+                , String.class);
+        //手动设置为true 才能调用私有方法
+        sout.setAccessible(true);
+        //调用方法对象
+        sout.invoke(targetObject,"aaa","bbb");
+
+
+
+        /**
          * 获取指定方法并调用
          */
         Method publicMethod = tagetClass.getDeclaredMethod("publicMethod",
