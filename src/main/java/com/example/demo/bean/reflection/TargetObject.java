@@ -1,4 +1,4 @@
-package com.example.demo.bean.agent.jdk;
+package com.example.demo.bean.reflection;
 
 public class TargetObject {
     private String value;

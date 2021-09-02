@@ -1,4 +1,4 @@
-package com.example.demo.bean.agent.jdk;
+package com.example.demo.bean.reflection;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
  */
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException, NoSuchFieldException {
-        Class<?> tagetClass = Class.forName("com.example.demo.bean.agent.jdk.TargetObject");
+        Class<?> tagetClass = Class.forName("com.example.demo.bean.reflection.TargetObject");
         TargetObject targetObject= ( TargetObject )tagetClass.newInstance();
         //通过calss对象获取所有的方法、
         Method[] methods = tagetClass.getMethods();
@@ -27,7 +27,6 @@ public class Main {
         sout.setAccessible(true);
         //调用方法对象
         sout.invoke(targetObject,"aaa","bbb");
-
 
 
         /**
